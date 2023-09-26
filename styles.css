@@ -1,0 +1,340 @@
+@font-face {
+    font-family: 'Cardo';
+    src: url(/assets/fonts/Cardo/Cardo-Regular.ttf);
+}
+
+.header {
+    /*ưu tiên: width, position, z-index */
+    display: flex;
+    background: #fff0f5;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 1rem;
+    height: 100px;
+    position: fixed;
+    width: 100vw;
+    z-index: 100;
+}
+.nav {
+    color: black;
+}
+.nav button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: transparent;
+    cursor: pointer;
+    border: none;
+    height: 20px;
+}
+.nav button svg {
+    fill: black;
+    width: inherit;
+    height: inherit;
+}
+.left-nav {
+    display: flex;
+    margin-left: 70px;
+}
+.edit-font {
+    font-family: Georgia, serif;
+    font-size: 25px;
+}
+
+.first-logo {
+    width: 200px;
+}
+
+.right-nav {
+    margin-right: 70px;
+    font-family: 'Dancing Script';
+    font-size: 15px;
+}
+
+.shopping-bag {
+    width: 25px;
+}
+
+* {
+    box-sizing: border-box;
+}
+body {
+    font-family: Verdana, sans-serif;
+    margin: 0;
+}
+.mySlides {
+    display: none;
+}
+.slides {
+    vertical-align: middle;
+    width: inherit;
+    height: inherit;
+    object-position: top;
+    object-fit: cover;
+}
+
+/* Slideshow container */
+.slideshow-container {
+    height: 95vh;
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+}
+
+@keyframes slideshow {
+    0% {
+        opacity: 0;
+    }
+    20% {
+        opacity: 1;
+    }
+    33% {
+        opacity: 1;
+    }
+    53% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+/* Next & previous buttons */
+.prev,
+.next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 16px;
+    margin-top: -22px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover,
+.next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Caption text */
+.text {
+    color: #f2f2f2;
+    font-size: 20px;
+    padding: 8px 12px;
+    position: absolute;
+    bottom: 8px;
+    width: 100%;
+    text-align: center;
+    font-family: 'Dancing Script', cursive;
+    background: #000;
+    letter-spacing: 5px;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+    color: #f2f2f2;
+    font-size: 12px;
+    padding: 8px 12px;
+    position: absolute;
+    top: 0;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+}
+
+.active,
+.dot:hover {
+    background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+
+@keyframes fade {
+    from {
+        opacity: 0.4;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+    .prev,
+    .next,
+    .text {
+        font-size: 11px;
+    }
+}
+
+/* START (Body) collection */
+.collection-container {
+    background-color: #fff0f5;
+    padding: 2rem 2rem;
+}
+
+.collection__tiltle {
+    text-align: center;
+}
+
+.title--first_name {
+    font-family: 'Dancing Script', cursive;
+    font-size: 3rem;
+}
+
+.title--second_name {
+    font-family: 'Dancing Script', cursive;
+    font-size: 1.3rem;
+    margin-top: 1rem;
+}
+.collection__items .items__container {
+    display: flex;
+    justify-content: center;
+    margin-top: 2rem;
+    width: 100%;
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+.collection__items .item {
+    font-family: 'Cardo';
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    min-width: 300px;
+    height: auto;
+    flex-basis: calc(25% - 2rem); /* 1/3 - di khoang cach giua 2 item */
+}
+.info__name {
+    text-transform: uppercase;
+    font-size: 1rem;
+    padding: 1rem;
+}
+.info__price {
+    font-size: 1rem;
+}
+.btn__quickshop {
+    opacity: 0;
+    display: flex;
+    position: absolute;
+    bottom: 0;
+    text-transform: uppercase;
+    font-size: 1.2rem;
+    /* background-color: #989898; */
+    color: #fff;
+    /* padding: 0.2rem 1rem; */
+    width: 100%;
+    text-align: center;
+    justify-content: center;
+    height: 100%;
+    align-items: center;
+    transition: opacity 700ms;
+}
+.btn__quickshop .title {
+    padding: 0.2rem 3rem;
+    background-color: #111;
+    cursor: pointer;
+}
+.btn__quickshop .title:hover {
+    background-color: #fff0f5;
+    color: #000;
+}
+.img__container {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+/* Hien thi Qucik shop khi dua chuot vao img__container */
+.img__container:hover .btn__quickshop {
+    opacity: 1;
+}
+.collection__items .item__img {
+    display: block;
+    width: inherit;
+    height: 500px;
+    object-fit: cover;
+    background-color: #000000cb;
+}
+.item__info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+/* START footer */
+.footer {
+    width: 100%;
+    height: auto;
+    background-color: #fff0f5;
+    padding: 0 20vw;
+    padding-top: 2rem;
+}
+
+.footer-nav.top {
+    display: flex;
+    justify-items: center;
+    justify-content: space-between;
+    flex-direction: row;
+    padding-top: 3rem;
+}
+
+.footer .member {
+    font-family: 'Cardo';
+    font-size: 1rem;
+}
+
+.member .title {
+    display: inline-flex;
+    gap: 0.7rem;
+}
+
+.footer .footer-nav.mid {
+    display: flex;
+    gap: 1.5rem;
+    margin-top: 30px;
+    flex-direction: row;
+    justify-content: center;
+    margin-bottom: 1rem;
+}
+.footer-nav.mid svg {
+    cursor: pointer;
+}
+.footer .bottom {
+    border-top: 2px solid #bbb;
+    padding-top: 1rem;
+}
+
+.cre {
+    font-family: 'Cardo';
+    font-size: 1rem;
+}
+/* END footer */
+
+@media (max-width: 400px) {
+    .collection__items .item {
+        flex-basis: 1;
+    }
+}
