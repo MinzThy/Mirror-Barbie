@@ -64,6 +64,7 @@ body {
 }
 .mySlides {
     display: none;
+    height: 100%;
 }
 .slides {
     vertical-align: middle;
@@ -75,7 +76,7 @@ body {
 
 /* Slideshow container */
 .slideshow-container {
-    height: 95vh;
+    height: auto;
     position: relative;
     width: 100%;
     overflow: hidden;
@@ -225,10 +226,11 @@ body {
     display: flex;
     align-items: center;
     flex-direction: column;
-    min-width: 300px;
+    width: auto;
     height: auto;
-    flex-basis: calc(25% - 2rem); /* 1/3 - di khoang cach giua 2 item */
+    flex-basis: calc(33.33% - 2rem); /* 1/3 - di khoang cach giua 2 item */
 }
+
 .info__name {
     text-transform: uppercase;
     font-size: 1rem;
@@ -274,8 +276,8 @@ body {
 }
 .collection__items .item__img {
     display: block;
-    width: inherit;
-    height: 500px;
+    width: 100%;
+    height: 100%;
     object-fit: cover;
     background-color: #000000cb;
 }
@@ -299,6 +301,7 @@ body {
     justify-content: space-between;
     flex-direction: row;
     padding-top: 3rem;
+    flex-wrap: wrap;
 }
 
 .footer .member {
@@ -333,8 +336,20 @@ body {
 }
 /* END footer */
 
-@media (max-width: 400px) {
+@media (max-width: 480px) {
     .collection__items .item {
-        flex-basis: 1;
+        flex-basis: calc(100%);
+    }
+    .header .left-nav,
+    .header .right-nav {
+        margin: 0;
+    }
+    .header .mid-nav .first-logo {
+        width: 120px;
+    }
+}
+@media (max-width: 1024px) and (min-width: 480px) {
+    .collection__items .item {
+        flex-basis: calc(50% - 2rem);
     }
 }
