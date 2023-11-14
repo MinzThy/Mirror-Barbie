@@ -3,7 +3,7 @@
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Document</title>
+        <title>Trang chủ</title>
         <link rel="stylesheet" href="styles.css" />
         <script
             src="https://kit.fontawesome.com/a076d05399.js"
@@ -19,57 +19,174 @@
             href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap"
             rel="stylesheet"
         />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Croissant+One&family=Dancing+Script&display=swap"
+            rel="stylesheet"
+        />
     </head>
     <body>
         <div class="header">
             <div class="nav left-nav">
+                <a
+                    href="/"
+                    style="
+                        color: black;
+                        font-family: 'Cardo';
+                        text-decoration: none;
+                    "
+                    >Home</a
+                >
                 <button>
-                    <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        width="16"
-                        height="16"
-                        fill="currentColor"
-                        class="bi bi-list"
-                        viewBox="0 0 16 16"
-                    >
-                        <path
-                            fill-rule="evenodd"
-                            d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z"
-                        />
-                    </svg>
+                    <nav>
+                        <ul>
+                            <li>
+                                <p class="shop-by-type">Shop by type</p>
+                                <div class="menu-container">
+                                    <ul class="dropdown-menu">
+                                        <li><a href="#">Dresses</a></li>
+                                        <li><a href="#">Sets</a></li>
+                                        <li><a href="#">Skirts</a></li>
+                                        <li><a href="#">Tops</a></li>
+                                    </ul>
+                                </div>
+                            </li>
+                        </ul>
+                    </nav>
                 </button>
-
-                <button>
-                    <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        width="16"
-                        height="16"
-                        fill="currentColor"
-                        class="bi bi-search-heart"
-                        viewBox="0 0 16 16"
-                    >
-                        <path
-                            d="M6.5 4.482c1.664-1.673 5.825 1.254 0 5.018-5.825-3.764-1.664-6.69 0-5.018Z"
-                        />
-                        <path
-                            d="M13 6.5a6.471 6.471 0 0 1-1.258 3.844c.04.03.078.062.115.098l3.85 3.85a1 1 0 0 1-1.414 1.415l-3.85-3.85a1.007 1.007 0 0 1-.1-.115h.002A6.5 6.5 0 1 1 13 6.5ZM6.5 12a5.5 5.5 0 1 0 0-11 5.5 5.5 0 0 0 0 11Z"
-                        />
-                    </svg>
-                </button>
+                <div class="campaigns-content">
+                    <button class="campaigns">
+                        <p class="title">Campaigns</p>
+                        <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="12"
+                            height="12"
+                            fill="currentColor"
+                            class="bi bi-chevron-down"
+                            viewBox="0 0 16 16"
+                        >
+                            <path
+                                fill-rule="evenodd"
+                                d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"
+                            />
+                        </svg>
+                    </button>
+                    <div class="campaigns-menu">
+                        <ul>
+                            <!-- <li>
+                                <a href="/campaign.html">Spring Summer 2022</a>
+                            </li> -->
+                            <li>
+                                <a href="/campaign.html">Spring Summer 2024</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
             </div>
             <div class="nav mid-nav">
-                <img
-                    class="first-logo"
-                    src="/assets/logo/Logo-Boxbie Studio.png"
-                />
+                <a href="/"
+                    ><img
+                        class="first-logo"
+                        src="/assets/logo/Logo-Boxbie Studio.png"
+                /></a>
             </div>
             <div class="nav right-nav">
-                <button>
+                <div class="search-container">
+                    <button class="search-button">
+                        <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            x="0px"
+                            y="0px"
+                            width="100"
+                            height="100"
+                            viewBox="0 0 50 50"
+                        >
+                            <path
+                                d="M 21 3 C 11.601563 3 4 10.601563 4 20 C 4 29.398438 11.601563 37 21 37 C 24.355469 37 27.460938 36.015625 30.09375 34.34375 L 42.375 46.625 L 46.625 42.375 L 34.5 30.28125 C 36.679688 27.421875 38 23.878906 38 20 C 38 10.601563 30.398438 3 21 3 Z M 21 7 C 28.199219 7 34 12.800781 34 20 C 34 27.199219 28.199219 33 21 33 C 13.800781 33 8 27.199219 8 20 C 8 12.800781 13.800781 7 21 7 Z"
+                            ></path>
+                        </svg>
+                    </button>
+                    <div class="search-input">
+                        <div class="container">
+                            <input
+                                placeholder="Start Searching"
+                                type="text"
+                                autocomplete="off"
+                            />
+                            <div class="search-input__search-icon">
+                                <svg
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    x="0px"
+                                    y="0px"
+                                    width="24"
+                                    height="24"
+                                    viewBox="0 0 50 50"
+                                >
+                                    <path
+                                        d="M 21 3 C 11.601563 3 4 10.601563 4 20 C 4 29.398438 11.601563 37 21 37 C 24.355469 37 27.460938 36.015625 30.09375 34.34375 L 42.375 46.625 L 46.625 42.375 L 34.5 30.28125 C 36.679688 27.421875 38 23.878906 38 20 C 38 10.601563 30.398438 3 21 3 Z M 21 7 C 28.199219 7 34 12.800781 34 20 C 34 27.199219 28.199219 33 21 33 C 13.800781 33 8 27.199219 8 20 C 8 12.800781 13.800781 7 21 7 Z"
+                                    ></path>
+                                </svg>
+                            </div>
+                        </div>
+                        <button class="search-input__close-btn">Close</button>
+                    </div>
+                </div>
+
+                <button class="login-button">
+                    <u
+                        class="login"
+                        style="font-family: 'Cardo'; font-size: 15px"
+                    >
+                        Login
+                    </u>
+                </button>
+                <div class="login-layout">
+                    <div class="login-menu">
+                        <div class="login-menu-close">Close</div>
+                        <div class="login-menu-signin">
+                            <div class="signin-title">Sign up</div>
+                            <div class="input signin-email">
+                                <input type="email" placeholder="Email" />
+                            </div>
+                            <div class="input signin-password">
+                                <input type="password" placeholder="Password" />
+                            </div>
+                            <div class="input signin-btns">
+                                <div class="btns-login">
+                                    <button>
+                                        <a
+                                            href="/account.html"
+                                            style="
+                                                text-decoration: none;
+                                                color: black;
+                                            "
+                                            >Login</a
+                                        >
+                                    </button>
+                                </div>
+                                <div class="btns-createAccount">
+                                    <a
+                                        href="/createaccount.html"
+                                        style="
+                                            text-decoration: none;
+                                            color: black;
+                                            font-family: 'Cardo';
+                                        "
+                                        >Create Account</a
+                                    >
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <a href="/cart.html" class="cart">
                     <img
                         class="shopping-bag"
                         src="/assets/icons/shopping-bag-svgrepo-com.svg"
                     />
-                </button>
+                    <span class="cart-value">3</span>
+                </a>
             </div>
         </div>
 
@@ -79,30 +196,30 @@
                     <div class="numbertext">1 / 3</div>
                     <img
                         class="slides"
-                        src="/assets/pics/ngang.jpg"
-                        style="width: 100%"
+                        src="/assets/pics/z4746485247941_59e0b60344dcfa25844dd5f0ab910bc5.jpg"
+                        style="width: 100%; height: 60%"
                     />
-                    <div class="text">SUMMER-GIRLS</div>
+                    <div class="text">DRESS TO IMPRESS</div>
                 </div>
 
                 <div class="mySlides fade">
                     <div class="numbertext">2 / 3</div>
                     <img
                         class="slides"
-                        src="/assets/pics/z4721947316778_9e617226d275e1d03e30cab36b7b7c72.jpg"
+                        src="/assets/pics/z4746059915173_693a5cfafcdf50099d388472dafb5f9a.jpg"
                         style="width: 100%"
                     />
-                    <div class="text">ATUMN-GIRLS</div>
+                    <div class="text">SHE GOT THE LOOK</div>
                 </div>
 
                 <div class="mySlides fade">
                     <div class="numbertext">3 / 3</div>
                     <img
                         class="slides"
-                        src="/assets/pics/z4721947321257_5c65bef2198a43dfeecd50f20db8153d.jpg"
+                        src="/assets/pics/z4746059915154_d1ad0088dfc78da0ccc9bb21da9e7a6d.jpg"
                         style="width: 100%"
                     />
-                    <div class="text">WINTER-GIRLS</div>
+                    <div class="text">GARDEN GIRL</div>
                 </div>
 
                 <!-- Next and previous buttons -->
@@ -156,7 +273,7 @@
 
         <div class="collection-container">
             <div class="collection__tiltle">
-                <div class="title--first_name">Collection Pre-Order</div>
+                <div class="title--first_name">Explore The Collection</div>
             </div>
             <div class="collection__tiltle">
                 <div class="title--second_name">If you like it. Wear it</div>
@@ -170,8 +287,13 @@
                                 src="/assets/pics/tam1.jpg"
                                 class="item__img"
                             />
-                            <span class="btn__quickshop"
-                                ><span class="title"> Quick Shop </span>
+                            <span class="btn__quickshop">
+                                <a
+                                    class="title"
+                                    href="/product.html"
+                                    style="text-decoration: none"
+                                    >Quick Shop</a
+                                >
                             </span>
                         </span>
                         <span class="item__info">
@@ -188,7 +310,12 @@
                                 class="item__img"
                             />
                             <span class="btn__quickshop"
-                                ><span class="title"> Quick Shop </span>
+                                ><a
+                                    class="title"
+                                    href="/product.html"
+                                    style="text-decoration: none"
+                                    >Quick Shop</a
+                                >
                             </span>
                         </span>
                         <span class="item__info">
@@ -205,7 +332,12 @@
                                 class="item__img"
                             />
                             <span class="btn__quickshop"
-                                ><span class="title"> Quick Shop </span>
+                                ><a
+                                    class="title"
+                                    href="/product.html"
+                                    style="text-decoration: none"
+                                    >Quick Shop</a
+                                >
                             </span>
                         </span>
                         <span class="item__info">
@@ -224,7 +356,12 @@
                                 class="item__img"
                             />
                             <span class="btn__quickshop"
-                                ><span class="title"> Quick Shop </span>
+                                ><a
+                                    class="title"
+                                    href="/product.html"
+                                    style="text-decoration: none"
+                                    >Quick Shop</a
+                                >
                             </span>
                         </span>
                         <span class="item__info">
@@ -243,7 +380,12 @@
                                 class="item__img"
                             />
                             <span class="btn__quickshop"
-                                ><span class="title"> Quick Shop </span>
+                                ><a
+                                    class="title"
+                                    href="/product.html"
+                                    style="text-decoration: none"
+                                    >Quick Shop</a
+                                >
                             </span>
                         </span>
                         <span class="item__info">
@@ -262,7 +404,12 @@
                                 class="item__img"
                             />
                             <span class="btn__quickshop"
-                                ><span class="title"> Quick Shop </span>
+                                ><a
+                                    class="title"
+                                    href="/product.html"
+                                    style="text-decoration: none"
+                                    >Quick Shop</a
+                                >
                             </span>
                         </span>
                         <span class="item__info">
@@ -281,7 +428,12 @@
                                 class="item__img"
                             />
                             <span class="btn__quickshop"
-                                ><span class="title"> Quick Shop </span>
+                                ><a
+                                    class="title"
+                                    href="/product.html"
+                                    style="text-decoration: none"
+                                    >Quick Shop</a
+                                >
                             </span>
                         </span>
                         <span class="item__info">
@@ -300,7 +452,12 @@
                                 class="item__img"
                             />
                             <span class="btn__quickshop"
-                                ><span class="title"> Quick Shop </span>
+                                ><a
+                                    class="title"
+                                    href="/product.html"
+                                    style="text-decoration: none"
+                                    >Quick Shop</a
+                                >
                             </span>
                         </span>
                         <span class="item__info">
@@ -319,7 +476,12 @@
                                 class="item__img"
                             />
                             <span class="btn__quickshop"
-                                ><span class="title"> Quick Shop </span>
+                                ><a
+                                    class="title"
+                                    href="/product.html"
+                                    style="text-decoration: none"
+                                    >Quick Shop</a
+                                >
                             </span>
                         </span>
                         <span class="item__info">
@@ -338,7 +500,12 @@
                                 class="item__img"
                             />
                             <span class="btn__quickshop"
-                                ><span class="title"> Quick Shop </span>
+                                ><a
+                                    class="title"
+                                    href="/product.html"
+                                    style="text-decoration: none"
+                                    >Quick Shop</a
+                                >
                             </span>
                         </span>
                         <span class="item__info">
@@ -357,7 +524,12 @@
                                 class="item__img"
                             />
                             <span class="btn__quickshop"
-                                ><span class="title"> Quick Shop </span>
+                                ><a
+                                    class="title"
+                                    href="/product.html"
+                                    style="text-decoration: none"
+                                    >Quick Shop</a
+                                >
                             </span>
                         </span>
                         <span class="item__info">
@@ -376,7 +548,12 @@
                                 class="item__img"
                             />
                             <span class="btn__quickshop"
-                                ><span class="title"> Quick Shop </span>
+                                ><a
+                                    class="title"
+                                    href="/product.html"
+                                    style="text-decoration: none"
+                                    >Quick Shop</a
+                                >
                             </span>
                         </span>
                         <span class="item__info">
@@ -395,7 +572,12 @@
                                 class="item__img"
                             />
                             <span class="btn__quickshop"
-                                ><span class="title"> Quick Shop </span>
+                                ><a
+                                    class="title"
+                                    href="/product.html"
+                                    style="text-decoration: none"
+                                    >Quick Shop</a
+                                >
                             </span>
                         </span>
                         <span class="item__info">
@@ -414,7 +596,12 @@
                                 class="item__img"
                             />
                             <span class="btn__quickshop"
-                                ><span class="title"> Quick Shop </span>
+                                ><a
+                                    class="title"
+                                    href="/product.html"
+                                    style="text-decoration: none"
+                                    >Quick Shop</a
+                                >
                             </span>
                         </span>
                         <span class="item__info">
@@ -433,26 +620,12 @@
                                 class="item__img"
                             />
                             <span class="btn__quickshop"
-                                ><span class="title"> Quick Shop </span>
-                            </span>
-                        </span>
-                        <span class="item__info">
-                            <span class="info__name"
-                                >Dam cong chua bach tuyet</span
-                            >
-                            <span class="info__price">$200.00</span>
-                        </span>
-                    </div>
-
-                    <!-- PIC 16: -->
-                    <div class="item">
-                        <span class="img__container">
-                            <img
-                                src="/assets/pics/tam16.jpg"
-                                class="item__img"
-                            />
-                            <span class="btn__quickshop"
-                                ><span class="title"> Quick Shop </span>
+                                ><a
+                                    class="title"
+                                    href="/product.html"
+                                    style="text-decoration: none"
+                                    >Quick Shop</a
+                                >
                             </span>
                         </span>
                         <span class="item__info">
@@ -465,7 +638,27 @@
                 </div>
             </div>
         </div>
-
+        <div class="newsletter">
+            <div class="newsletter-title">
+                <p>Newsletter</p>
+                <div class="title-info">
+                    <p>
+                        Sign up to get the latest on sales, new releases and
+                        more …
+                    </p>
+                </div>
+            </div>
+            <div class="signup-control">
+                <input
+                    type="email"
+                    class="control"
+                    placeholder="Enter your email address..."
+                />
+            </div>
+            <div class="signup-button">
+                <button>Subcribe</button>
+            </div>
+        </div>
         <div class="footer">
             <div class="footer-nav top">
                 <div class="member member__hotline">
@@ -523,8 +716,9 @@
                 </svg>
             </div>
             <div class="footer-nav bottom">
-                <span class="cre">© 2023 Boxbie Studio</span>
+                <span class="cre">Copyright © 2023 Boxbie Studio</span>
             </div>
         </div>
     </body>
+    <script src="/assets/js/main.js"></script>
 </html>

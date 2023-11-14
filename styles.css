@@ -26,6 +26,7 @@
     cursor: pointer;
     border: none;
     height: 20px;
+    font-family: 'Cardo';
 }
 .nav button svg {
     fill: black;
@@ -35,6 +36,165 @@
 .left-nav {
     display: flex;
     margin-left: 70px;
+    gap: 1rem;
+    justify-content: flex-start;
+}
+
+.left-nav,
+.right-nav {
+    width: 40%;
+}
+
+.shop-by-type {
+    padding: 0.5rem 1rem;
+    font-family: 'Cardo';
+    font-size: 15px;
+}
+.campaigns {
+    padding: 0.5rem 1rem;
+    font-family: 'Cardo';
+    font-size: 15px;
+}
+.campaigns .title {
+    margin-right: 0.5rem;
+}
+.campaigns svg {
+    width: 12px !important;
+    height: 12px !important;
+}
+.campaigns:hover {
+    text-decoration: underline;
+}
+.campaigns:hover + .campaigns-menu,
+.campaigns-menu:hover {
+    display: block;
+}
+.campaigns-menu {
+    display: none;
+    position: absolute;
+    top: 1.2rem;
+    background-color: #fff;
+    border-radius: 0.4rem;
+    box-shadow: 2px 1px 5px 0px rgba(0, 0, 0, 0.75);
+    -webkit-box-shadow: 2px 1px 5px 0px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 2px 1px 5px 0px rgba(0, 0, 0, 0.75);
+}
+.campaigns-menu ul {
+    list-style-type: none;
+    padding: 0;
+}
+.campaigns-menu li {
+    padding: 0.5rem 1rem;
+    width: max-content;
+}
+.campaigns-menu a {
+    font-family: 'Cardo';
+    text-decoration: none;
+    color: #000;
+}
+.campaigns-content {
+    position: relative;
+}
+.search-input {
+    z-index: 1;
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    background-color: #ffffffb0;
+    top: 0;
+    left: 0;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.search-input.--open {
+    display: flex;
+}
+
+/* .search-input input {
+    font-size: 1rem;
+    border: none;
+    outline: none;
+    background-color: transparent;
+    color: #000;
+    width: 400px;
+    font-family: 'Cardo';
+}
+.search-input {
+    padding: 0.5rem 1rem;
+    border-radius: 0.5rem; // bo tròn 4 bên góc (trái phải - trên dưới)
+    border: 1px solid black;
+    background-color: #fff;
+    position: absolute;
+    right: 0;
+    display: none;
+
+}
+.search-button:hover + .search-input,
+.search-input:hover {
+    display: flex;
+} */
+.search-input__close-btn {
+    font-family: 'Cardo';
+    font-size: 1rem;
+    margin-top: 2rem;
+}
+.search-input .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.search-input .container input::placeholder {
+    color: #000;
+    font-style: italic;
+}
+.search-input .container input {
+    border: none;
+    outline: none;
+    font-family: 'Cardo';
+    font-size: 1.5rem;
+    background: transparent;
+    border-bottom: 1px solid black;
+    text-align: center;
+}
+button nav ul li {
+    display: inline-block;
+    position: relative;
+    text-align: center;
+}
+
+button nav ul li .menu-container {
+    display: none;
+    position: absolute;
+    top: 2.2rem;
+    left: 0;
+}
+.dropdown-menu {
+    margin-top: 0.5rem;
+    background-color: #fff;
+    padding: 10px 15px;
+    width: 100px;
+}
+
+button nav ul li:hover .menu-container {
+    display: block;
+}
+
+button nav ul li .menu-container li {
+    display: block;
+    margin: 5px 0;
+    margin-top: 20px;
+}
+
+button nav ul li .menu-container li a {
+    color: #333;
+    text-decoration: none;
+}
+
+button nav ul li .menu-container li a:hover {
+    color: #fff;
+    background-color: #333;
 }
 .edit-font {
     font-family: Georgia, serif;
@@ -49,8 +209,14 @@
     margin-right: 70px;
     font-family: 'Dancing Script';
     font-size: 15px;
+    display: flex;
+    gap: 4rem;
+    justify-content: flex-end;
 }
-
+button ul {
+    margin: 0;
+    padding: 0;
+}
 .shopping-bag {
     width: 25px;
 }
@@ -132,7 +298,7 @@ body {
 /* Caption text */
 .text {
     color: #f2f2f2;
-    font-size: 20px;
+    font-size: 25px;
     padding: 8px 12px;
     position: absolute;
     bottom: 8px;
@@ -196,7 +362,7 @@ body {
 /* START (Body) collection */
 .collection-container {
     background-color: #fff0f5;
-    padding: 2rem 2rem;
+    padding: 2rem 8rem;
 }
 
 .collection__tiltle {
@@ -233,8 +399,9 @@ body {
 
 .info__name {
     text-transform: uppercase;
-    font-size: 1rem;
+    font-size: 0.8rem;
     padding: 1rem;
+    font-family: 'Croissant One', cursive;
 }
 .info__price {
     font-size: 1rem;
@@ -258,12 +425,13 @@ body {
 }
 .btn__quickshop .title {
     padding: 0.2rem 3rem;
-    background-color: #111;
+    background-color: white;
     cursor: pointer;
+    color: black;
 }
 .btn__quickshop .title:hover {
-    background-color: #fff0f5;
-    color: #000;
+    background-color: black;
+    color: #fff;
 }
 .img__container {
     width: 100%;
@@ -286,6 +454,62 @@ body {
     flex-direction: column;
     align-items: center;
 }
+/* START form sign-up */
+.newsletter {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 2rem;
+    margin: auto;
+    background-image: url(/assets/pics/img-newsletter.jpg);
+    /* background: black; */
+}
+.newsletter .newsletter-title {
+    text-align: center;
+}
+.newsletter-title p {
+    color: white;
+    font-size: 2rem;
+    font-family: initial;
+    margin-bottom: 1rem;
+}
+.newsletter .signup-control {
+    padding-top: 1rem;
+}
+.newsletter .control {
+    width: 450px;
+    height: 45px;
+    padding: 5px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #c2b6b6;
+    color: #ffffff;
+    text-align: center;
+}
+.newsletter .title-info p {
+    font-size: 20px;
+}
+.signup-button {
+    margin-top: 1rem;
+}
+.signup-button button {
+    background-color: #fff0f5;
+    color: black;
+    padding: 0.5rem 20px;
+    border: none;
+    border-radius: 0.7rem;
+    font-size: 20px;
+    cursor: pointer;
+    box-shadow: 0 2px rgba(229, 107, 107, 0.2);
+    font-family: 'Cardo';
+}
+
+.signup-button:hover {
+    background-color: #fff0f5;
+}
+
+/* END sign-up */
 /* START footer */
 .footer {
     width: 100%;
@@ -335,6 +559,343 @@ body {
     font-size: 1rem;
 }
 /* END footer */
+
+.login-layout {
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    background-color: #e7dfdf8e;
+    top: 0;
+    left: 0;
+    display: none;
+    z-index: 1;
+}
+.login-layout .login-menu {
+    width: 390px;
+    height: 100%;
+    background-color: #fff;
+    float: right; /* dành cho display: block (mặc định thể điv là block) */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.login-layout.menu-open {
+    display: block;
+} /*  */
+
+.login-menu .login-menu-close {
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 1rem 2rem;
+    cursor: pointer;
+}
+
+.signin-btns {
+    display: flex;
+    padding: 0.5rem;
+    gap: 1rem;
+}
+.login-menu-close {
+    font-family: 'Cardo';
+}
+.login-menu-signin {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.signin-title {
+    font-family: 'Cardo';
+}
+.input .signin-btns {
+    gap: 1rem;
+}
+
+.input input {
+    border: none;
+    outline: none;
+    font-size: 0.9rem;
+    line-height: 1.25;
+    font-family: 'Cardo';
+}
+.input {
+    padding: 0.5rem 1rem;
+    border-bottom: 1px solid black;
+}
+
+.cart {
+    position: relative;
+}
+.cart-value {
+    position: absolute;
+    right: -13px;
+    top: -6px;
+    padding: 0.3rem;
+    background-color: #e3babaf5;
+    border-radius: 4rem;
+    font-size: 0.6rem;
+    color: #343434;
+}
+
+/* CSS cart.html */
+.product-container {
+    padding: 0 8rem;
+    position: relative;
+    width: 100%;
+    height: auto;
+}
+.container-title {
+    padding-top: 160px;
+    color: #000;
+}
+.container-title .title-center {
+    font-size: 25px;
+    text-align: center;
+    font-family: 'Dancing Script', cursive;
+}
+
+.container-items-1 {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    padding: 2rem 1rem;
+    padding: 30px;
+    border: 1px solid #ebebeb;
+    border-radius: 20px;
+    margin-bottom: 5px;
+    background: #fff0f5;
+    color: #000;
+    margin-top: 2rem;
+}
+
+.container-items-left {
+    display: flex;
+    gap: 2rem;
+}
+
+.left-img {
+    padding-left: 3rem;
+}
+.left-img img {
+    width: 100px;
+}
+
+.right-amount {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.right-price {
+    padding-right: 3rem;
+    font-family: 'Cardo';
+}
+
+.plus {
+    border: 1px solid black;
+    padding: 0 0.3rem;
+    background: #8080803d;
+}
+.value {
+    border: 1px solid black;
+    padding: 0 2rem;
+    border: 1px solid black;
+    border-right: none;
+    border-left: none;
+}
+.minus {
+    border: 1px solid black;
+    padding: 0 0.4rem;
+    background: #8080803d;
+}
+.left-info p,
+b {
+    font-family: 'Cardo';
+}
+
+.container-items-right {
+    display: flex;
+    gap: 2rem;
+}
+
+/* CSS phần tiếp tục mua sản phẩm/ đặt hàng ngay */
+.container-purchase {
+    display: flex;
+    justify-content: center;
+    padding: 3rem;
+}
+
+.continute-shopping button {
+    padding: 0.5rem 1rem;
+}
+
+/* CSS campaigns.html*/
+.campaigns-container {
+    height: auto;
+    position: relative;
+    width: 100%;
+    padding: 6rem;
+    background: #fff0f5;
+}
+
+.campaigns-container .campaigns-container__title {
+    padding: 2rem;
+    text-align: center;
+    font-family: 'Cardo';
+    font-size: 25px;
+}
+.campaigns-container__products {
+    display: flex;
+    gap: 3rem;
+    flex-direction: column;
+}
+.product--row1 {
+    display: flex;
+    justify-content: center;
+    gap: 3rem;
+}
+
+.product--row2 {
+    display: flex;
+    justify-content: center;
+    gap: 3rem;
+}
+
+.product--row3 {
+    display: flex;
+    justify-content: center;
+    gap: 3rem;
+}
+
+/* css Create Account */
+.form-signup {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.form-signup-register {
+    padding: 1rem;
+    gap: 1.5rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.form-signup-submit_and_back {
+    margin: 2rem;
+}
+.back {
+    margin-top: 1.3rem;
+    text-align: center;
+}
+
+/* CSS account.html */
+.form-account {
+    display: flex;
+    flex-direction: column;
+}
+.divider {
+    height: 4px;
+    background-color: #000;
+    width: 80vw;
+    margin: 0 auto;
+    border-radius: 20px;
+}
+.form-account-detail {
+    display: flex;
+    justify-content: space-around;
+    padding-bottom: 2rem;
+}
+.infor-container {
+    display: flex;
+    flex-direction: column;
+}
+.form-account-bestseller {
+    padding-bottom: 4rem;
+}
+.form-account-bestseller .bestseller-pics {
+    display: flex;
+    justify-content: center;
+    gap: 3rem;
+}
+
+.form-account-detail .info {
+    font-family: 'Cardo';
+    display: inline-flex;
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+/* CSS product.html */
+.product {
+    display: flex;
+    position: relative;
+    width: 100%;
+    height: auto;
+    padding: 10rem 10rem 5rem 10rem;
+    /* padding: 10rem; */
+    gap: 4rem;
+    background: #fff0f5;
+}
+
+.product-right {
+    display: flex;
+    flex-direction: column;
+    /* gap: 2rem; */
+    padding-top: 3rem;
+}
+
+.product-right-info {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    font-family: 'Cardo';
+}
+
+.product-right-info-size {
+    display: flex;
+    gap: 2rem;
+}
+.product-right-info-size span {
+    border-top: 3px solid black;
+    display: block;
+    width: 45px;
+    text-align: center;
+}
+
+/* .color-edit:hover {
+    background-color: #fff;
+    color: black;
+    cursor: pointer;
+} */
+
+.product-right-info-size span:hover {
+    background-color: rgb(0, 0, 0);
+    color: #fff;
+    cursor: pointer;
+}
+
+.product-right-info-color span:hover {
+    background-color: white !important;
+    color: #000 !important;
+    cursor: pointer;
+}
+
+/* CSS ordernow.html */
+.payment {
+    padding: 10rem 8rem 5rem 8rem;
+    position: relative;
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    gap: 5rem;
+}
+.payment-left {
+    display: flex;
+    gap: 2rem;
+    flex-direction: column;
+}
 
 @media (max-width: 480px) {
     .collection__items .item {
